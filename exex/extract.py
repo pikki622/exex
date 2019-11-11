@@ -35,3 +35,23 @@ class Extractor:
             result = [[rows.value]]
 
         return result
+
+    # TODO
+    def cell(self, cell: str):
+        pass
+
+    # TODO
+    def column(self, cell: str):
+        pass
+
+    # TODO
+    def columns(self, cell: str):
+        pass
+
+    # TODO
+    def row(self, row_number):
+        pass
+
+    # TODO
+    def rows(self, *args):
+        pass
