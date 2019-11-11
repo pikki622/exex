@@ -37,15 +37,19 @@ class Extractor:
         return result
 
     # TODO
-    def cell(self, cell: str):
+    def cell(self, cell_coord: str):
         pass
 
     # TODO
-    def column(self, cell: str):
+    def cells(self, *args):
         pass
 
     # TODO
-    def columns(self, cell: str):
+    def column(self, column_name: str):
+        pass
+
+    # TODO
+    def columns(self, *args):
         pass
 
     # TODO
