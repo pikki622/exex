@@ -8,7 +8,7 @@ class Extractor:
     __book = None
 
     def __init__(self, excel_file_path):
-        self.__book = load_workbook(filename=excel_file_path, read_only=True)
+        self.__book = load_workbook(filename=excel_file_path)
 
     @property
     def book(self):
@@ -30,7 +30,7 @@ class Extractor:
         rows = sheet[cell_range]
 
         if util.is_iterable(rows):
-            result = [list([cell.value for cell in row]) for row in rows]
+            result = [[cell.value for cell in row] for row in rows]
         else:
             result = [[rows.value]]
 

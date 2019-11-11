@@ -12,9 +12,24 @@ class ExtractTest(unittest.TestCase):
             ext.all(), [["name", "age"], ["alpha", 15], ["beta", 28], ["gamma", 32]]
         )
 
-    def test_range_cell(self):
+    def test_range_single_cell(self):
         ext = extract.Extractor(TEST_FILE_PATH)
         self.assertEqual(ext.range("A1"), [["name"]])
+
+    # TODO
+    @unittest.skip
+    def test_range_single_column(self):
+        ext = extract.Extractor(TEST_FILE_PATH)
+        self.assertEqual(ext.range("A"), [["name"], ["alpha"], ["beta"], ["gamma"]])
+
+    # TODO
+    @unittest.skip
+    def test_range_multiple_columns(self):
+        ext = extract.Extractor(TEST_FILE_PATH)
+        self.assertEqual(
+            ext.range("A:B"),
+            [["name", "age"], ["alpha", 15], ["beta", 28], ["gamma", 32]],
+        )
 
     def test_range_horizontal(self):
         ext = extract.Extractor(TEST_FILE_PATH)
