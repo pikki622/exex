@@ -36,7 +36,7 @@ class ExtractTest(unittest.TestCase):
     def test_range_single_row(self):
         ext = extract.Extractor(TEST_FILE_PATH)
         self.assertEqual(ext.range("1"), [["name", "age"]])
-        self.assertEqual(ext.range("2:2"), [["alpha", 15]])
+        self.assertEqual(ext.range("2"), [["alpha", 15]])
 
     # TODO
     @unittest.skip
