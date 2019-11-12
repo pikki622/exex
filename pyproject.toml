@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "exex"
 version = "0.1.0"
-description = "Excel extractor written in Python."
+description = "Extract data from Excel documents."
 authors = ["Viktor Persson <viktor.persson@arcsin.se>"]
 
 [tool.poetry.dependencies]
