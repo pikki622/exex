@@ -40,9 +40,8 @@ class Extractor:
     def cell(self, cell_coord: str):
         pass
 
-    # TODO
     def cells(self, *args):
-        pass
+        return [self.cell(cell_coord) for cell_coord in args]
 
     # TODO
     def column(self, column_name: str):
