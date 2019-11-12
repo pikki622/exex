@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "exex"
-version = "0.1.2"
+version = "0.1.3"
 description = "Extract data from Excel documents."
 authors = ["Viktor Persson"]
 license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/vikpe/exex"
 repository = "https://github.com/vikpe/exex"
-keywords = ["packaging", "dependency", "poetry"]
+keywords = ["excel", "extract", "tool"]
 classifiers = [
     "Development Status :: 1 - Planning",
     "Topic :: Office/Business :: Financial :: Spreadsheet",
