@@ -21,13 +21,6 @@ ext.cell("A1")
 ext.cells("A1", "B2")
 ```
 
-Command | Description
---- | ---
-`todo` | TODO
-
-### API
-TODO
-
 ## Development
 
 **Tests** (local Python version)
