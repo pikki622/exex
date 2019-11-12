@@ -9,7 +9,7 @@ class ExtractTest(unittest.TestCase):
         ext = extract.Extractor(TEST_FILE_PATH)
 
         self.assertEqual(
-            ext.all(), [["name", "age"], ["alpha", 15], ["beta", 28], ["gamma", 32]]
+            ext.all(), [["name", "abbreviation", "age"], ["alpha", "a", 1], ["beta", "b", 2], ["gamma", "g", 3]]
         )
 
     def test_range_single_cell(self):
@@ -18,7 +18,7 @@ class ExtractTest(unittest.TestCase):
 
     def test_range_horizontal(self):
         ext = extract.Extractor(TEST_FILE_PATH)
-        self.assertEqual(ext.range("A1:B1"), [["name", "age"]])
+        self.assertEqual(ext.range("A1:B1"), [["name", "abbreviation"]])
 
     def test_range_vertical(self):
         ext = extract.Extractor(TEST_FILE_PATH)
@@ -26,17 +26,17 @@ class ExtractTest(unittest.TestCase):
 
     def test_range_square(self):
         ext = extract.Extractor(TEST_FILE_PATH)
-        self.assertEqual(ext.range("A3:B4"), [["beta", 28], ["gamma", 32]])
+        self.assertEqual(ext.range("A3:B4"), [["beta", "b"], ["gamma", "g"]])
 
     def test_range_multiple_rows(self):
         ext = extract.Extractor(TEST_FILE_PATH)
-        self.assertEqual(ext.range("1:2"), [["name", "age"], ["alpha", 15]])
+        self.assertEqual(ext.range("1:2"), [["name", "abbreviation", "age"], ["alpha", "a", 1]])
 
     @unittest.skip
     def test_range_single_row(self):
         ext = extract.Extractor(TEST_FILE_PATH)
-        self.assertEqual(ext.range("1"), [["name", "age"]])
-        self.assertEqual(ext.range("2"), [["alpha", 15]])
+        self.assertEqual(ext.range("1"), [["name", "abbreviation"]])
+        self.assertEqual(ext.range("2"), [["alpha", "a"]])
 
     # TODO
     @unittest.skip
@@ -50,5 +50,5 @@ class ExtractTest(unittest.TestCase):
         ext = extract.Extractor(TEST_FILE_PATH)
         self.assertEqual(
             ext.range("A:B"),
-            [["name", "age"], ["alpha", 15], ["beta", 28], ["gamma", 32]],
+            [["name", "abbreviation"], ["alpha", "a"], ["beta", "b"], ["gamma", "g"]],
         )
