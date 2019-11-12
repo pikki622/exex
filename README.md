@@ -12,7 +12,7 @@ pip install exex
 
 ## Usage
 
-![Sample Excel file](https://raw.githubusercontent.com/vikpe/exex/master/docs/sample_xlsx.png Sample Excel file")
+![Sample Excel file](https://raw.githubusercontent.com/vikpe/exex/master/docs/sample_xlsx.png "Sample Excel file")
 
 ```python
 from exex import Extractor
