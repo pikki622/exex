@@ -1,13 +1,25 @@
 [tool.poetry]
 name = "exex"
-version = "0.1.0"
+version = "0.1.2"
 description = "Extract data from Excel documents."
 authors = ["Viktor Persson"]
 license = "MIT"
 readme = "README.md"
-
 homepage = "https://github.com/vikpe/exex"
 repository = "https://github.com/vikpe/exex"
+keywords = ["packaging", "dependency", "poetry"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Topic :: Office/Business :: Financial :: Spreadsheet",
+    "Topic :: Utilities",
+    "Operating System :: POSIX",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS :: MacOS X",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+]
 
 [tool.poetry.dependencies]
 python = "^3.6"
