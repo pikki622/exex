@@ -15,9 +15,9 @@ pip install exex
 ![Sample Excel file](https://raw.githubusercontent.com/vikpe/exex/master/docs/sample_xlsx.png "Sample Excel file")
 
 ```python
-from exex import Extractor
+from exex import extract
 
-ext = Extractor('sample.xlsx')
+ext = extract.Extractor('sample.xlsx')
 ext.all()
 ext.range("A1:B2")
 ext.cell("A1")
