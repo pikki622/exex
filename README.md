@@ -2,16 +2,31 @@
 > Excel extractor written in Python
 
 ## Features
-TODO
+* Extract data from Excel (xlsx)
+* Format result as JSON, JSONL, XML
 
 ## Installation
-TODO
+```sh
+pip install exex
+```
 
 ## Usage
+```python
+from exex import Extractor
+
+ext = Extractor('sample.xlsx')
+ext.all()
+ext.range("A1:B2")
+ext.cell("A1")
+ext.cells("A1", "B2")
+```
+
 Command | Description
 --- | ---
 `todo` | TODO
 
+### API
+TODO
 
 ## Development
 TODO
