@@ -2,7 +2,12 @@
 name = "exex"
 version = "0.1.0"
 description = "Extract data from Excel documents."
-authors = ["Viktor Persson <viktor.persson@arcsin.se>"]
+authors = ["Viktor Persson"]
+license = "MIT"
+readme = "README.md"
+
+homepage = "https://github.com/vikpe/exex"
+repository = "https://github.com/vikpe/exex"
 
 [tool.poetry.dependencies]
 python = "^3.6"
