@@ -18,10 +18,29 @@ pip install exex
 from exex import extract
 
 ext = extract.Extractor('sample.xlsx')
+
+ext.sheets().active()
+ext.sheets().first()
+ext.sheets().last()
+ext.sheets().nth()
+ext.sheet("prices").cells().all().json()
+
 ext.all()
+
 ext.range("A1:B2")
+ext.range("A1:A4")
+ext.ranges(["A1:B2", "A1:A4"])
+
 ext.cell("A1")
-ext.cells("A1", "B2")
+ext.cells(["A1", "B2"])
+
+ext.column("A")
+ext.columns(["A", "B", "C"])
+ext.column_range(from="C", to="D")
+
+ext.row(1)
+ext.rows([1,2,3])
+ext.row_range(from=3, to=5)
 ```
 
 ## Development
