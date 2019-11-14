@@ -7,7 +7,7 @@ license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/vikpe/exex"
 repository = "https://github.com/vikpe/exex"
-keywords = ["excel", "extract", "tool"]
+keywords = ["excel", "extract", "parser", "tool"]
 classifiers = [
     "Development Status :: 1 - Planning",
     "Topic :: Office/Business :: Financial :: Spreadsheet",
