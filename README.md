@@ -20,25 +20,26 @@ from exex import extract
 ext = extract.Extractor('sample.xlsx')
 
 # Sheets
-ext.sheets.active            # active sheet
-ext.sheets[0]                # first sheet
-ext.sheets["prices"]         # sheet by name
+ext.sheetnames               # (array) sheet names
+ext.sheets.active            # (sheet) active sheet
+ext.sheets[0]                # (sheet) first sheet
+ext.sheets["prices"]         # (sheet) sheet by name
 
 # Cells
-sheet["A1"]                  # single cell by name
-sheet.cell(row=1, column=1)  # single cell by row/column
-sheet["A1":"B2"]             # range of cells
+sheet["A1"]                  # (value) single cell by name
+sheet.cell(row=1, column=1)  # (value) single cell by row/column
+sheet["A1":"B2"]             # (array) range of cells
 
-sheet.all()                  # all cells
-sheet.cells(["A1", "B2"])    # multiple cells by name
+sheet.all()                  # (array) all cells
+sheet.cells(["A1", "B2"])    # (array) multiple cells by name
 
 # Rows
-sheet[5]                     # single row
-sheet[5:10]                  # range of rows
+sheet[5]                     # (array) single row
+sheet[5:10]                  # (array) range of rows
 
 # Columns
-sheet["C"]                   # single column
-sheet["A:C"]                 # range of columns
+sheet["C"]                   # (array) single column
+sheet["A:C"]                 # (array) range of columns
 ```
 
 ## Development
