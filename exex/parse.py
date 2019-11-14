@@ -3,7 +3,7 @@ from openpyxl.cell.cell import Cell
 import types
 
 
-def parse(val):
+def parse_values(val):
     if isinstance(val, types.GeneratorType):
         val = tuple(val)
 

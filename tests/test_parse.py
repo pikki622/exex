@@ -75,21 +75,23 @@ class ParseTest(unittest.TestCase):
             [["name", "alpha", "beta", "gamma"], ["abbreviation", "a", "b", "g"]],
         )
 
-    def test_parse(self):
-        self.assertEqual(parse.parse(None), None)
-        self.assertEqual(parse.parse(False), False)
-        self.assertEqual(parse.parse(5), 5)
-        self.assertEqual(parse.parse("a"), "a")
-        self.assertEqual(parse.parse([1, 2, 3]), [1, 2, 3])
+    def test_parse_values(self):
+        self.assertEqual(parse.parse_values(None), None)
+        self.assertEqual(parse.parse_values(False), False)
+        self.assertEqual(parse.parse_values(5), 5)
+        self.assertEqual(parse.parse_values("a"), "a")
+        self.assertEqual(parse.parse_values([1, 2, 3]), [1, 2, 3])
 
-        self.assertEqual(parse.parse(self.sheet["A1"]), "name")
-        self.assertEqual(parse.parse(self.sheet.cell(1, 1)), "name")
-        self.assertEqual(parse.parse(self.sheet[1]), ["name", "abbreviation", "age"])
+        self.assertEqual(parse.parse_values(self.sheet["A1"]), "name")
+        self.assertEqual(parse.parse_values(self.sheet.cell(1, 1)), "name")
         self.assertEqual(
-            parse.parse(self.sheet["A"]), ["name", "alpha", "beta", "gamma"]
+            parse.parse_values(self.sheet[1]), ["name", "abbreviation", "age"]
         )
         self.assertEqual(
-            parse.parse(self.sheet.values),
+            parse.parse_values(self.sheet["A"]), ["name", "alpha", "beta", "gamma"]
+        )
+        self.assertEqual(
+            parse.parse_values(self.sheet.values),
             [
                 ["name", "abbreviation", "age"],
                 ["alpha", "a", 1],
@@ -97,17 +99,21 @@ class ParseTest(unittest.TestCase):
                 ["gamma", "g", 3],
             ],
         )
-        self.assertEqual(parse.parse(self.sheet["A1:B1"]), [["name", "abbreviation"]])
         self.assertEqual(
-            parse.parse(self.sheet["A1:A4"]), [["name"], ["alpha"], ["beta"], ["gamma"]]
+            parse.parse_values(self.sheet["A1:B1"]), [["name", "abbreviation"]]
         )
         self.assertEqual(
-            parse.parse(self.sheet["A1:B2"]), [["name", "abbreviation"], ["alpha", "a"]]
+            parse.parse_values(self.sheet["A1:A4"]),
+            [["name"], ["alpha"], ["beta"], ["gamma"]],
         )
         self.assertEqual(
-            parse.parse(self.sheet[2:3]), [["alpha", "a", 1], ["beta", "b", 2]]
+            parse.parse_values(self.sheet["A1:B2"]),
+            [["name", "abbreviation"], ["alpha", "a"]],
         )
         self.assertEqual(
-            parse.parse(self.sheet["A:B"]),
+            parse.parse_values(self.sheet[2:3]), [["alpha", "a", 1], ["beta", "b", 2]]
+        )
+        self.assertEqual(
+            parse.parse_values(self.sheet["A:B"]),
             [["name", "alpha", "beta", "gamma"], ["abbreviation", "a", "b", "g"]],
         )
