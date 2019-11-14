@@ -10,29 +10,38 @@ pip install exex
 
 ![Sample Excel file](https://raw.githubusercontent.com/vikpe/exex/master/docs/sample_xlsx.png "Sample Excel file")
 
+**Load Excel file**
 ```python
 from openpyxl import load_workbook
 from exex import parse
 
 book = load_workbook("sample.xlsx") # load excel file
 sheet = book.active # get active sheet
+```
 
-# single cell by name
+**Single cell by name**
+```python
 parse.values(sheet["A1"])
-"name"                    
+"name"
+```
 
-# single cell by row/column number
+**Single cell by row/column number**
+```python
 parse.values(sheet.cell(row=1, column=1)) 
 "name"
+```
    
-# range of cells
+**Range of cells**
+```python
 parse.values(sheet["A1":"B2"])
 [
   ["name", "abbreviation"],
   ["alpha", "a"],
 ]
+```
 
-# all values              
+**All cells**
+```python              
 parse.values(sheet.values)
 [
   ["name", "abbreviation", "age"],
@@ -40,23 +49,31 @@ parse.values(sheet.values)
   ["beta", "b", 2],
   ["gamma", "g", 3],
 ]
+```
 
-# row by number                  
+**Row by number**
+```python                  
 parse.values(sheet[1])
 ["alpha", "a", 1]
-           
-# range of rows           
+```
+
+**Range of rows**
+```python           
 parse.values(sheet[1:2])
 [
   ["name", "abbreviation", "age"],
   ["alpha", "a", 1],
 ]
+```
 
-# column by name            
+**Column by name**
+```python            
 parse.values(sheet["A"])
 ["name", "alpha", "beta", "gamma"]
+```
 
-# column range
+**Column range**
+```python
 parse.values(sheet["A:B"])
 [
   ["name", "alpha"],
