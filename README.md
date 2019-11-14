@@ -19,28 +19,26 @@ from exex import extract
 
 ext = extract.Extractor('sample.xlsx')
 
-ext.sheets().active()
-ext.sheets().first()
-ext.sheets().last()
-ext.sheets().nth()
-ext.sheet("prices").cells().all().json()
+# Sheets
+ext.sheets.active            # active sheet
+ext.sheets[0]                # first sheet
+ext.sheets["prices]          # sheet by name
 
-ext.all()
+# Cells
+sheet["A1"]                  # single cell by name
+sheet.cell(row=1, column=1)  # single cell by row/column
+sheet["A1":"B2"]             # range of cells
 
-ext.range("A1:B2")
-ext.range("A1:A4")
-ext.ranges(["A1:B2", "A1:A4"])
+sheet.all()                  # all cells
+sheet.cells(["A1", "B2"])    # multiple cells by name
 
-ext.cell("A1")
-ext.cells(["A1", "B2"])
+# Rows
+sheet[5]                     # single row
+sheet[5:10]                  # range of rows
 
-ext.column("A")
-ext.columns(["A", "B", "C"])
-ext.column_range(from="C", to="D")
-
-ext.row(1)
-ext.rows([1,2,3])
-ext.row_range(from=3, to=5)
+# Columns
+sheet["C"]                   # single column
+sheet["A:C"]                 # range of columns
 ```
 
 ## Development
