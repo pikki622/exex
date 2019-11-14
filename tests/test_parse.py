@@ -1,8 +1,10 @@
 import unittest
-from exex import parse
+
 from openpyxl import load_workbook
 from openpyxl.workbook.workbook import Workbook
 from openpyxl.worksheet.worksheet import Worksheet
+
+from exex import parse
 
 
 class ParseTest(unittest.TestCase):
