@@ -74,6 +74,12 @@ class ParseTest(unittest.TestCase):
         )
 
     def test_parse(self):
+        self.assertEqual(parse.parse(None), None)
+        self.assertEqual(parse.parse(False), False)
+        self.assertEqual(parse.parse(5), 5)
+        self.assertEqual(parse.parse("a"), "a")
+        self.assertEqual(parse.parse([1, 2, 3]), [1, 2, 3])
+
         self.assertEqual(parse.parse(self.sheet["A1"]), "name")
         self.assertEqual(parse.parse(self.sheet.cell(1, 1)), "name")
         self.assertEqual(parse.parse(self.sheet[1]), ["name", "abbreviation", "age"])
