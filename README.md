@@ -38,8 +38,10 @@ sheet[5:10]                   # (array) range of rows
 
 sheet["C"]                    # (array) single column
 sheet["A:C"]                  # (array) range of columns
+```
 
-# Use `exex.parse.values()` to get values
+**Use `exex.parse.values()` to get values**
+```python
 from exex import parse
 
 parse.values(sheet["A1"])                   
