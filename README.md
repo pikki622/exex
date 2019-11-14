@@ -22,7 +22,7 @@ ext = extract.Extractor('sample.xlsx')
 # Sheets
 ext.sheets.active            # active sheet
 ext.sheets[0]                # first sheet
-ext.sheets["prices#]         # sheet by name
+ext.sheets["prices"]         # sheet by name
 
 # Cells
 sheet["A1"]                  # single cell by name
