@@ -72,12 +72,12 @@ parse.values(sheet["A"])
 ["name", "alpha", "beta", "gamma"]
 ```
 
-**Column range**
+**Rangge of columns**
 ```python
 parse.values(sheet["A:B"])
 [
-  ["name", "alpha"],
-  ["abbreviation", "a"],
+  ["name", "alpha", "beta", "gamma"],
+  ["abbreviation", "a", "b", "g"],
 ]
 ```
 
