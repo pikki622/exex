@@ -1,4 +1,4 @@
-# exex [![Build Status](https://travis-ci.org/vikpe/exex.svg?branch=master)](https://travis-ci.org/vikpe/exex) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+# exex ![test](https://github.com/vikpe/exex/workflows/test/badge.svg?branch=master) [![codecov](https://codecov.io/gh/vikpe/exex/branch/master/graph/badge.svg)](https://codecov.io/gh/vikpe/exex) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 > Extract data from Excel documents
 
 ## Installation
