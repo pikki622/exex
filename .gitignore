@@ -3,6 +3,7 @@ __pycache__/
 .idea/
 .vscode/
 .tox/
+.venv
 *.egg-info/
 *.py[cod]
 *$py.class
