@@ -1,5 +1,16 @@
-# exex ![test](https://github.com/vikpe/exex/workflows/test/badge.svg?branch=master) [![codecov](https://codecov.io/gh/vikpe/exex/branch/master/graph/badge.svg)](https://codecov.io/gh/vikpe/exex) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-> Extract data from Excel documents
+<div align="center">
+    <h1>exex</h1>
+    <p>
+        <b>Extract data from Excel documents</b>
+    </p>
+
+<!--[![PyPI version](https://badge.fury.io/py/chromato.svg)](https://pypi.org/project/chromato/) -->
+![test](https://github.com/vikpe/exex/workflows/test/badge.svg?branch=master) [![codecov](https://codecov.io/gh/vikpe/exex/branch/master/graph/badge.svg)](https://codecov.io/gh/vikpe/exex)
+
+<br>
+
+</div>
+
 
 ## Installation
 ```sh
