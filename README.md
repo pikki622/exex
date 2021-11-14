@@ -4,7 +4,7 @@
         <b>Extract data from Excel documents</b>
     </p>
 
-<!--[![PyPI version](https://badge.fury.io/py/chromato.svg)](https://pypi.org/project/chromato/) -->
+[![PyPI version](https://badge.fury.io/py/exex.svg)](https://pypi.org/project/exex/)
 ![test](https://github.com/vikpe/exex/workflows/test/badge.svg?branch=master) [![codecov](https://codecov.io/gh/vikpe/exex/branch/master/graph/badge.svg)](https://codecov.io/gh/vikpe/exex)
 
 <br>
