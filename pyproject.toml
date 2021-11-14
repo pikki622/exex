@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "exex"
-version = "0.1.8"
+version = "1.0.0"
 description = "Extract data from Excel documents."
 authors = ["Viktor Persson"]
 license = "MIT"
