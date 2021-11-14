@@ -114,11 +114,6 @@ poetry install
 poetry run pytest
 ```
 
-**Tests** (all Python versions defined in `tox.ini`)
-```sh
-poetry run tox
-```
-
 **Code formatting** (black)
 ```sh
 poetry run black .

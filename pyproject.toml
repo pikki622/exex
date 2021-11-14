@@ -27,10 +27,8 @@ openpyxl = "^3.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
-tox = "^3.24.4"
 pytest-cov = "^3.0.0"
 pytest-sugar = "^0.9.4"
-tox-pyenv = "^1.1.0"
 black = "^21.10b0"
 
 [build-system]
