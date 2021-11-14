@@ -93,6 +93,11 @@ book.sheetnames               # (array) sheet names
 
 ## Development
 
+**Setup**
+```sh
+poetry install
+```
+
 **Tests** (local Python version)
 ```sh
 poetry run pytest
